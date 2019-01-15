@@ -1,0 +1,15 @@
+#success{
+    color: green;
+}
+
+#failure{
+    color: red;
+}
+
+.hint {
+    color: blue;
+}
+
+h1{
+    text-align: center;
+}

@@ -1,0 +1,27 @@
+#header{
+    display: block;
+    text-align: center;
+}
+
+#header img{
+    height: 200px;
+    width: 300px;
+}
+
+#error{
+    color: red;
+}
+
+.teammate{
+    background-color: aliceblue;
+}
+
+#myTeamLineUp{
+    background-color: aliceblue;
+    border: 1px solid black;
+}
+
+#available{
+    background-color: aliceblue;
+    border: 1px solid black;
+}

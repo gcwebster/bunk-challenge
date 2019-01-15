@@ -1,0 +1,21 @@
+nav{
+    background-color: blue;
+    color: white;
+}
+
+nav li{
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    padding: 20px;
+}
+
+nav a:hover {
+    color: blue;
+    background-color: white;
+    padding: 20px;
+}

@@ -6,7 +6,6 @@ import { catchError } from 'rxjs/operators';
 interface IWeather{
   weather: string;
   coord: string;
-
 }
 
 @Component({
@@ -24,7 +23,7 @@ export class HomeComponent implements OnInit {
 
   public ngOnInit() {
 
-    this.bristol = this.http.get<IWeather>('https://api.openweathermap.org/data/2.5/weather?id=4749005&appid=f4bbeb8ec1a8fb95591f2cf112aaa575')
+    this.bristol = this.http.get<IWeather>('https://api.openweathermap.org/data/2.5/weather?id=4749005&appid=f4bbeb8ec1a8fb95591f2cf112aaa575&units=metric')
     .pipe(
       catchError((err: HttpErrorResponse) => {
         this.error=true;
@@ -32,7 +31,7 @@ export class HomeComponent implements OnInit {
       })
     );
 
-    this.london = this.http.get<IWeather>('https://api.openweathermap.org/data/2.5/weather?id=2643744&appid=f4bbeb8ec1a8fb95591f2cf112aaa575')
+    this.london = this.http.get<IWeather>('https://api.openweathermap.org/data/2.5/weather?id=2643744&appid=f4bbeb8ec1a8fb95591f2cf112aaa575&units=metric')
     .pipe(
       catchError((err: HttpErrorResponse) => {
         this.error=true;
@@ -40,7 +39,7 @@ export class HomeComponent implements OnInit {
       })
     );
 
-    this.rome = this.http.get<IWeather>('https://api.openweathermap.org/data/2.5/weather?id=4219762&appid=f4bbeb8ec1a8fb95591f2cf112aaa575')
+    this.rome = this.http.get<IWeather>('https://api.openweathermap.org/data/2.5/weather?id=4219762&appid=f4bbeb8ec1a8fb95591f2cf112aaa575&units=metric')
     .pipe(
       catchError((err: HttpErrorResponse) => {
         this.error=true;

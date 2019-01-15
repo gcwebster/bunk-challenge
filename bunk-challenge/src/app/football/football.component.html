@@ -1,0 +1,30 @@
+<div id="header">
+  <h1>Create a truly unbelievable line up!</h1>
+  <img src="https://hips.hearstapps.com/digitalspyuk.cdnds.net/16/35/1472721928-karmara.gif">
+</div>
+<div class="row">
+  <div class="col-6">
+    <div id="myTeamLineUp">
+      <h2>Your team is:</h2>
+      <ul *ngFor="let teammate of myTeam">
+        <p class="teammate"><strong>Name: </strong>{{teammate.name}}</p>
+        <p class="teammate"><strong>Position: </strong>{{teammate.position}}</p>
+        <p>----------------</p>
+      </ul>
+      <p *ngIf="error" id="error">{{error}}</p>
+    </div>
+  </div>
+  <div class="col-6">
+    <div id="available">
+      <h2>You can select:</h2>
+      <ul *ngFor="let footballer of footballers">
+        <div class="player">
+          <p>{{footballer?.name}}</p>
+          <p>{{footballer?.position}}</p>
+          <p>----------------</p>
+          <button (click)="addToList(footballer.name, footballer.position)">Add to list</button>
+        </div>
+      </ul>
+    </div>
+  </div>
+</div>

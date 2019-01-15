@@ -1,0 +1,47 @@
+<h1>Return of the impossible quiz!</h1>
+
+<h2 *ngIf="!ready">Ready?</h2>
+<button (click)="imReady()" *ngIf="!ready" class="btn-success">Lets do this!</button>
+<div *ngIf="ready">
+
+
+  <h2 *ngIf="!reallyReady">Sure? Bad things lie ahead</h2>
+  <button (click)="imReallyReady()" *ngIf="!reallyReady" class="btn-success">Yeah boi!</button>
+  <div *ngIf="reallyReady">
+
+
+      
+    <h2 *ngIf="!reallySuperReady">Last time I promise!</h2>
+    <button (click)="imReallyVeryReady()" *ngIf="!reallySuperReady" class="btn-success">Great, lets go!</button>
+    <div *ngIf="reallySuperReady">
+
+      <h2 *ngIf="!reallySuperSpaceCowboyReady">Ok I lied! Sorry 😥</h2>
+      <button (click)="imReallyVeryFinalReady()" *ngIf="!reallySuperSpaceCowboyReady" class="btn-success">Just take me there!😠</button>
+      <div *ngIf="reallySuperSpaceCowboyReady">
+
+        <img src="https://vignette.wikia.nocookie.net/blogclan-2/images/b/b9/Random-image-15.jpg/revision/latest?cb=20160706220047">
+        <form (ngSubmit)="answerQuestion()">
+          <label for="question1">What is this?</label>
+          <input
+          [(ngModel)]="answer"
+          type="text"
+          id="question1"
+          name="answer"
+          >
+          <button type="submit">Submit</button>
+        </form>
+        
+        <p id="success" *ngIf = "success">{{success}}</p>
+        <p id="failure" *ngIf = "failure">{{failure}}</p>
+        
+        <button (click)="giveAHint()" *ngIf="!hint">Get a hint🤔</button>
+        <div *ngIf="hint">
+          <p class="hint">{{hint}}</p>
+          <p *ngIf="!hint2">Need another hint?</p>
+          <button (click)="giveAHintAgain()" *ngIf="!hint2">Get a hint🤔</button>
+          <p *ngIf="hint2" class="hint">{{hint2}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

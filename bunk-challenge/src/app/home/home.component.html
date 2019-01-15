@@ -1,6 +1,6 @@
 <div class="jumbotron">
   <h1 class="display-4">Welcome to weatherly!</h1>
-  <p class="lead">See the weather all over the world (so long as you're only interested in Rome, Bristol and London). We have the most specific measurements of celcius from any provider! Find out do the billionth of a degree how cold it really is!</p>
+  <p class="lead">See the weather all over the world (so long as you're only interested in Rome, Bristol and London).</p>
 </div>
 
 <div class="row">
@@ -9,10 +9,10 @@
     <div class="card-body">
       <h5 class="card-title">{{(rome|async)?.name}}</h5>
         <ul class="card-text">
-          <li>Temperature: {{(rome|async)?.main.temp-273.15}} &#8451;</li>
-          <li>Humidity: {{(rome|async)?.main.humidity}}</li>
-          <li>Min temperature: {{(rome|async)?.main.temp_min -273.15}}&#8451;</li>
-          <li>Max temperature: {{(rome|async)?.main.temp_max -273.15}}&#8451;</li>
+          <li>Temperature: {{(rome|async)?.main.temp}} &#8451;</li>
+          <li>Humidity: {{(rome|async)?.main.humidity}}%</li>
+          <li>Min temperature: {{(rome|async)?.main.temp_min }}&#8451;</li>
+          <li>Max temperature: {{(rome|async)?.main.temp_max }}&#8451;</li>
         </ul>
     </div>
   </div>
@@ -22,10 +22,10 @@
     <div class="card-body">
       <h5 class="card-title">{{(bristol|async)?.name}}</h5>
       <ul class="card-text">
-          <li>Temperature: {{(bristol|async)?.main.temp-273.15}} &#8451;</li>
-          <li>Humidity: {{(bristol|async)?.main.humidity}}</li>
-          <li>Min temperature: {{(bristol|async)?.main.temp_min -273.15}}&#8451;</li>
-          <li>Max temperature: {{(bristol|async)?.main.temp_max -273.15}}&#8451;</li>
+          <li>Temperature: {{(bristol|async)?.main.temp}} &#8451;</li>
+          <li>Humidity: {{(bristol|async)?.main.humidity}}%</li>
+          <li>Min temperature: {{(bristol|async)?.main.temp_min }}&#8451;</li>
+          <li>Max temperature: {{(bristol|async)?.main.temp_max }}&#8451;</li>
         </ul>
     </div>
   </div>
@@ -35,10 +35,10 @@
     <div class="card-body">
       <h5 class="card-title">{{(london|async)?.name}}</h5>
       <ul class="card-text">
-          <li>Temperature: {{(london|async)?.main.temp-273.15}} &#8451;</li>
-          <li>Humidity: {{(london|async)?.main.humidity}}</li>
-          <li>Min temperature: {{(london|async)?.main.temp_min -273.15}}&#8451;</li>
-          <li>Max temperature: {{(london|async)?.main.temp_max -273.15}} &#8451;</li>
+          <li>Temperature: {{(london|async)?.main.temp}} &#8451;</li>
+          <li>Humidity: {{(london|async)?.main.humidity}}%</li>
+          <li>Min temperature: {{(london|async)?.main.temp_min }}&#8451;</li>
+          <li>Max temperature: {{(london|async)?.main.temp_max }} &#8451;</li>
         </ul>
     </div>
   </div>
