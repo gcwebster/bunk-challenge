@@ -10,6 +10,7 @@ export class FootballComponent implements OnInit {
   footballers;
   myTeam = [];
   error='';
+
   constructor() { 
     this.footballers = footballers;
   }
@@ -28,7 +29,5 @@ export class FootballComponent implements OnInit {
       this.myTeam.push({name, position});
     else
       this.error = "Player " + name + " already exists in your team!";
-
   }
-
 }

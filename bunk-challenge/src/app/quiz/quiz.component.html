@@ -4,13 +4,10 @@
 <button (click)="imReady()" *ngIf="!ready" class="btn-success">Lets do this!</button>
 <div *ngIf="ready">
 
-
   <h2 *ngIf="!reallyReady">Sure? Bad things lie ahead</h2>
   <button (click)="imReallyReady()" *ngIf="!reallyReady" class="btn-success">Yeah boi!</button>
   <div *ngIf="reallyReady">
 
-
-      
     <h2 *ngIf="!reallySuperReady">Last time I promise!</h2>
     <button (click)="imReallyVeryReady()" *ngIf="!reallySuperReady" class="btn-success">Great, lets go!</button>
     <div *ngIf="reallySuperReady">

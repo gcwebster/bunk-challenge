@@ -18,8 +18,7 @@ export class QuizComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   imReady(){
     this.ready='yeah';
@@ -53,5 +52,4 @@ export class QuizComponent implements OnInit {
   giveAHintAgain(){
     this.hint2 = 'Sure looks like \'Pedro the mexican owl\' to me!';
   }
-
 }
